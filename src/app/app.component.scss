@@ -1,0 +1,9 @@
+div.flexbox-container {
+    justify-content: center;
+    display: flex;
+
+    div.flexbox-container-child {
+        text-align: center;
+        margin-top: 10rem;
+    }
+}

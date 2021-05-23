@@ -1,0 +1,15 @@
+<div ngbDropdown class="d-inline-block">
+
+    <button ngbDropdownToggle class="btn">
+        {{ getSelectedItemAsString() }}
+    </button>
+
+    <div ngbDropdownMenu>
+        <button *ngFor="let item of items"
+            ngbDropdownItem
+            (click)="onItemSelected(item)">
+            {{ getItemAsString(item) }}
+        </button>
+    </div>
+
+</div>
