@@ -1,0 +1,33 @@
+<div class="flexbox-container">
+    <div class="flexbox-container-child">
+
+        <app-display-climate-options 
+            [climate]="climate" 
+            [dataset]="dataset"
+            (climateChange)="onClimateChange($event)">
+        </app-display-climate-options>
+
+        <div *ngIf="!isLoaded">
+
+            <ngx-skeleton-loader count="2"></ngx-skeleton-loader>
+
+        </div>
+
+        <div *ngIf="isLoaded">
+
+            <app-display-progress-bar 
+                title="yes" 
+                [percentage]="yesValue" 
+                [type]="yesType">
+            </app-display-progress-bar>
+
+            <app-display-progress-bar 
+                title="no" 
+                [percentage]="noValue" 
+                [type]="noType">
+            </app-display-progress-bar>
+
+        </div>
+
+    </div>
+</div>

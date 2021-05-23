@@ -1,0 +1,50 @@
+<div>
+    <h3>¿Cómo es el clima en Ciudad Mante?</h3>
+    <p>
+
+        De <b> {{ dataset }} </b> registros
+        
+        <br />
+
+        ¿Cuál es la probabilidad de que haya un día con estos valores?
+
+        <br />
+
+    </p>
+
+    <ul>
+        <li>
+            Tipo de clima: 
+            <app-dropdown-select
+                [items]="outlook_array"
+                [(selectedItem)]="climate.outlook"
+                (selectedItemChange)="onClimateOptionChange()">
+            </app-dropdown-select>
+        </li>
+        <li>
+            Temperatura: 
+            <app-dropdown-select
+                [items]="temps_array"
+                [(selectedItem)]="climate.temp"
+                (selectedItemChange)="onClimateOptionChange()">
+            </app-dropdown-select>
+        </li>
+        <li>
+            Humedad: 
+            <app-dropdown-select
+                [items]="humidity_array"
+                [(selectedItem)]="climate.humidity"
+                (selectedItemChange)="onClimateOptionChange()">
+            </app-dropdown-select>
+        </li>
+        <li>
+            Viento: 
+            <app-dropdown-select
+                [items]="windy_array"
+                [(selectedItem)]="climate.windy"
+                (selectedItemChange)="onClimateOptionChange()">
+            </app-dropdown-select>
+        </li>
+    </ul>
+
+</div>
